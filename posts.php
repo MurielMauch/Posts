@@ -1,26 +1,8 @@
 <?php require_once('connection.php'); ?>
 
 <?php
-
 $sql = "SELECT * FROM Posts";
 $result = $conn->query($sql);
-/*
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Title: " . $row["title"]. " Body: " . $row["body"]. " User Id: " .$row["userId"] . "<br>";
-    }
-} else {
-    echo "0 results";
-}
-*/
-/*
-mysql_select_db($dbname, $conexao);
-$query_rs_posts = "SELECT * FROM Posts";
-$rs_posts = mysql_query($query_rs_posts, $conexao) or die(mysql_error());
-$row_rs_posts = mysql_fetch_assoc($rs_posts);
-$totalRows_rs_posts = mysql_num_rows($rs_posts);
-*/
 ?>
 
 <html>
@@ -36,7 +18,7 @@ $totalRows_rs_posts = mysql_num_rows($rs_posts);
     <td>Id</td>
     <td>Title</td>
     <td>Body</td>
-    <td>Comentários</td>
+    <td>Comments</td>
   </tr>
   <?php while($row = $result->fetch_assoc()) { ?>
     <tr>

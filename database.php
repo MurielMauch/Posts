@@ -18,7 +18,6 @@ if ($conn->query($sql) === TRUE) {
     echo "Error creating database: " . $conn->error;
 }
 
-
 // sql to create table
 $sqlTable1 = "CREATE TABLE Comments (
     id INT(6) PRIMARY KEY, 
@@ -44,6 +43,5 @@ if ($conn->query($sqlTable2) === TRUE) {
 } else {
     echo "Error creating table: " . $conn->error;
 }
-
 
 ?>
